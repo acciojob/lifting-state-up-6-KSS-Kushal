@@ -12,7 +12,7 @@ const App = () => {
   const handleComplete = (idx) => {
     const list = todos;
     list[idx].complete = true;
-    setTodos(list);
+    setTodos([...list]);
   }
   return (
     <div>

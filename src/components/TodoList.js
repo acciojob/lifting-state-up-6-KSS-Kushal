@@ -6,8 +6,8 @@ const TodoList = ({todos, handleComplete}) => {
         <h2>Child Component</h2>
         <ul>
             {todos.map((item, i)=>(
-                <li>{item.todo}
-                {!item.complete && <button onClick={handleComplete(i)}>Complete</button>}
+                <li key={i}>{item.todo}
+                {!item.complete && <button onClick={()=>handleComplete(i)}>Complete</button>}
                 </li>
             ))}
         </ul>
